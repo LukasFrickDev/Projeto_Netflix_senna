@@ -1,0 +1,72 @@
+@use 'variaveis';
+@use 'header';
+@use 'hero';
+@use 'detail';
+@use 'shows';
+@use 'footer';
+
+@font-face {
+    font-family: NetflixSans;
+    src: url(../../assets/NetflixSans-Light.otf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: NetflixSans;
+    src: url(../../assets/NetflixSans-Regular.otf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: NetflixSans;
+    src: url(../../assets/NetflixSans-Bold.otf);
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    list-style: none;
+    font-family: NetflixSans, Helvetica, sans-serif;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin title-info($fontSize: 14px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 6px;
+    color: variaveis.$corTextoSecundario;
+}
+
+@mixin text($fontSize: 24px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 6px;
+    color: variaveis.$corTexto;
+}
+
+.title-info--big {
+    @include title-info(16px)
+}
+
+.title-info {
+    @include title-info()
+}
+
+.title-info--small {
+    @include title-info(13px)
+}
+
+.text--big {
+    @include text(30px)
+}
+
+.text {
+    @include text
+}
+
+.text--small {
+    @include text(16px)
+}
+

@@ -1,0 +1,60 @@
+@use 'variaveis';
+
+.detail {
+    margin: 0 55px;
+    padding: 75px 96px ;
+
+    &__content {
+        border-top: 1px solid rgba(variaveis.$corTextoSecundario, 0.5);
+        border-bottom: 1px solid rgba(variaveis.$corTextoSecundario, 0.5);
+
+        &__description {
+            margin: 18px 550px;
+            text-align: center;
+        }
+
+        &__details {
+            margin-top: 75px;
+
+            &__itens {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 6px;
+                margin-top: 10px;
+
+                &__list {
+                    .title-info--big {
+                        font-weight: 400;
+                    }
+
+                    .text--small {
+                        font-weight: 400;
+                    }
+                    h4 {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        &__moredetails {
+            margin-top: 25px;
+
+            .title-info--big {
+                font-weight: 400;
+            }
+
+            &__itens {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                margin-top: 10px;
+                &__list {
+
+                    .text--small {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

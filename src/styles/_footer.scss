@@ -1,0 +1,77 @@
+@use 'variaveis';
+
+.footer {
+    margin: 100px 55px 0px;
+    padding: 25px 96px;
+
+    p {
+        margin-top: 24px;
+    }
+
+    &__container {
+        max-width: 1000px;
+        p{
+            margin-bottom: 30px;
+
+            span {
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+            
+            &__itens {
+                text-align: start;
+                padding: 0 22px 0 0;
+                margin: 0 0 16px;
+                
+                a{
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 8px;
+    max-width: 120px;
+    border: 1px solid variaveis.$corTextoSecundario;
+    background-color:  #000;
+    img {
+        height: 18px;
+        width: 18px;
+    }
+
+    select {
+        width: 100%;
+        background-color:  #000;
+        border: none;
+        color: variaveis.$corTextoSecundario;
+        height: 38px;
+        
+        &:hover {
+            color: variaveis.$corTextoSecundario;
+        }
+
+        option {
+            color: variaveis.$corDeFundo;
+            color: variaveis.$corTextoSecundario;
+        }
+    }
+}

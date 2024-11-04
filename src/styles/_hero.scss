@@ -1,0 +1,103 @@
+@use 'variaveis';
+
+.hero {
+    margin: 0 55px;
+
+    &__content {
+        background-image: url(../images/senna.png);
+        min-height: 95vh;
+        background-size: cover;
+        padding: 0 96px ;
+        
+        &__image {  
+            img {
+                max-width: 504px;
+                margin: 200px auto 0;
+            }
+        }
+        
+        .text {
+            margin-top: 40px;
+        }
+
+        &__infos {
+            display: flex;
+            justify-content: start;
+
+            &__info {
+                display: flex;
+
+                .title-info,
+                .title-info--big {
+                    margin: 16px 4px 0;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                }
+
+                .text-l {
+                    border: 1px solid variaveis.$corTextoSecundario;
+                    padding: 0 5px;
+                }
+            }
+        }
+
+        &__texts {
+            max-width: 580px;
+
+            p {
+                padding-top:16px ;
+                margin: 0;
+            }
+        }
+    }
+
+    .plans {
+        &__content {
+            margin: -64px 96px 32px;
+            background: linear-gradient(90deg, #6c1f41 -3.05%, #220e0f 99.59%);
+            border-radius: 4px;
+            &__item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px;
+
+                h3 {
+                    margin: 0;
+                }
+                &__image {
+                    max-width: 25px;
+
+                    margin: 0;
+                    padding: 0 15px 0;
+                }
+
+                .button {
+                    color: variaveis.$corTexto;
+                    text-decoration: none;
+                    font-size: 15px;
+                    text-align: center;
+                    border-radius: 2px ;
+                    cursor: pointer;
+                    margin: 5px 25px;
+
+                    &--red {
+                        background-color: variaveis.$corButton;
+                        border: 0;
+                        padding: 9px 65px;
+                        font-weight: bold;
+    
+                        &:hover {
+                            background-color: lighten(variaveis.$corButton, 3%);
+                        }
+        
+                    }
+                }
+            }
+        }
+    }
+
+}
