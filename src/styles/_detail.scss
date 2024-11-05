@@ -1,8 +1,13 @@
 @use 'variaveis';
 
 .detail {
-    margin: 0 55px;
-    padding: 75px 96px ;
+    padding: 75px 5vw ;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    @media (max-width: 768px){
+        margin-top: 110px;
+    }
 
     &__content {
         border-top: 1px solid rgba(variaveis.$corTextoSecundario, 0.5);
@@ -11,11 +16,23 @@
         &__description {
             margin: 18px 550px;
             text-align: center;
+
+            @media (max-width: 768px){
+                    margin: 18px 0;
+                    text-align: start;
+                    font-size: 16px;
+                    font-weight: 100;
+                    letter-spacing: .5px;
+            }
         }
 
         &__details {
             margin-top: 75px;
 
+            @media (max-width: 768px){
+                margin-top: 36px;
+                margin-bottom: 10px;       
+            }
             &__itens {
                 display: grid;
                 grid-template-columns: repeat(5, 1fr);
@@ -24,21 +41,37 @@
 
                 &__list {
                     .title-info--big {
-                        font-weight: 400;
+                        font-weight: 100;
+
+                        @media (max-width: 768px){
+                            font-size: 16px;
+                            letter-spacing: .5px;
+                        }
                     }
 
                     .text--small {
-                        font-weight: 400;
+                        font-weight: 100;
+                        @media (max-width: 768px){
+                            font-size: 16px;
+                            letter-spacing: .5px;
+                            padding-bottom: 6px;
+                        }
                     }
+
                     h4 {
                         margin-bottom: 5px;
                     }
+                }
+
+                @media (max-width: 768px){
+                    grid-template-columns: 1fr;
                 }
             }
         }
 
         &__moredetails {
             margin-top: 25px;
+
 
             .title-info--big {
                 font-weight: 400;
@@ -48,11 +81,24 @@
                 display: grid;
                 grid-template-columns: repeat(5, 1fr);
                 margin-top: 10px;
+
+                
                 &__list {
 
                     .text--small {
-                        font-weight: 400;
+                        font-weight: 100;
+
+                        @media (max-width: 768px){
+                            font-size: 16px;
+                            letter-spacing: .5px;
+                            padding-bottom: 6px;
+
+                        }
                     }
+                }
+
+                @media (max-width: 768px){
+                    grid-template-columns: 1fr;
                 }
             }
         }

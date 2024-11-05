@@ -2,7 +2,13 @@
 
 .footer {
     margin: 100px 0px 0px;
-    padding: 25px 96px;
+    padding: 25px 5vw;
+
+    @media (max-width: 768px){
+        margin: 50px 0 0 ; 
+        padding-left: 5vw;
+        padding-right: 0;
+    }
 
     p {
         margin-top: 24px;
@@ -12,9 +18,11 @@
         max-width: 1000px;
         p{
             margin-bottom: 30px;
+            color: variaveis.$corTextosFooter;
 
             span {
                 cursor: pointer;
+                color: variaveis.$corTextosFooter;
 
                 &:hover {
                     text-decoration: underline;
@@ -23,24 +31,36 @@
         }
 
         &__list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-            
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+                
             &__itens {
                 text-align: start;
                 padding: 0 22px 0 0;
                 margin: 0 0 16px;
-                
-                a{
-                    text-decoration: none;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
             }
+
+            @media (max-width: 768px){
+                grid-template-columns: 1fr 1fr;    
+                padding: 0 ;
+                margin: 0 ;   
+            }
+
+
         }
 
+
+    }
+}
+
+.title-info--small {
+    text-decoration: none;
+    font-size: 13px;
+    color: variaveis.$corTextosFooter;
+
+
+    &:hover {
+        text-decoration: underline;
     }
 }
 
@@ -51,7 +71,7 @@
     margin-top: 20px;
     padding-left: 8px;
     max-width: 120px;
-    border: 1px solid variaveis.$corTextoSecundario;
+    border: 1px solid variaveis.$corTextosFooter;
     background-color:  #000;
     img {
         height: 18px;
@@ -62,16 +82,16 @@
         width: 100%;
         background-color:  #000;
         border: none;
-        color: variaveis.$corTextoSecundario;
+        color: variaveis.$corTextosFooter;
         height: 38px;
         
         &:hover {
-            color: variaveis.$corTextoSecundario;
+            color: variaveis.$corTextosFooter;
         }
 
         option {
             color: variaveis.$corDeFundo;
-            color: variaveis.$corTextoSecundario;
+            color: variaveis.$corTextosFooter;
         }
     }
 }

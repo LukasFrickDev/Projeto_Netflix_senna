@@ -1,23 +1,42 @@
 @use 'variaveis';
 
 .hero {
-    margin: 0 55px;
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
 
     &__content {
-        background-image: url(../images/senna.png);
         min-height: 95vh;
+        padding: 0 5vw ;
+        background-image: url(../images/senna.png);
         background-size: cover;
-        padding: 0 96px ;
-        
+
+        @media (max-width: 768px) { 
+            background-image: url(../images/senna-cel.jpg);
+            padding-top: calc(50vw + 25px);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+
         &__image {  
             img {
                 max-width: 504px;
                 margin: 200px auto 0;
+
+                @media (max-width: 768px) { 
+                    max-width: 303px;
+                    margin: 0;
+                }
             }
         }
         
         .text {
             margin-top: 40px;
+
+            @media (max-width: 768px) { 
+                font-size: 24px;
+            }
         }
 
         &__infos {
@@ -50,15 +69,35 @@
             p {
                 padding-top:16px ;
                 margin: 0;
+                font-weight: 100;
+                letter-spacing: 1;
+            }
+
+            @media (max-width: 768px){
+                padding-top: 140px;      
+                
+                p {
+                    &:last-child {
+                        font-size: 14px;
+                    }
+                }
             }
         }
     }
 
     .plans {
+        @media (max-width: 768px){
+            margin-top: -330px;
+        }
         &__content {
             margin: -64px 96px 32px;
             background: linear-gradient(90deg, #6c1f41 -3.05%, #220e0f 99.59%);
             border-radius: 4px;
+
+            @media (max-width: 768px){
+                margin: 0 5vw;
+            }
+
             &__item {
                 display: flex;
                 justify-content: space-between;
@@ -70,9 +109,13 @@
                 }
                 &__image {
                     max-width: 25px;
-
                     margin: 0;
                     padding: 0 15px 0;
+
+                    @media (max-width: 768px){
+                        max-width: 35px;
+                        padding: 0 15px 0 0;
+                    }
                 }
 
                 .button {
@@ -92,6 +135,11 @@
     
                         &:hover {
                             background-color: lighten(variaveis.$corButton, 3%);
+                        }
+
+                        @media (max-width: 768px){
+                            padding: 9px 24px;
+                            font-size: 15px;
                         }
         
                     }

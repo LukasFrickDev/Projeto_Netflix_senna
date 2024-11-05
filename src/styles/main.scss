@@ -54,9 +54,6 @@ body {
     @include title-info()
 }
 
-.title-info--small {
-    @include title-info(13px)
-}
 
 .text--big {
     @include text(30px)
